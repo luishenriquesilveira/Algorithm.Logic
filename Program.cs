@@ -47,16 +47,16 @@ namespace Algorithm.Logic
                     switch (operation.Value.Substring(0, 1))
                     {
                         case "N":
-                            y =+ (operation.Value.Length > 1 ? Convert.ToInt32(operation.Value) : 0);
+                            y += (operation.Value.Length > 1 ? Convert.ToInt32(operation.Value.Substring(1)) : 1);
                             break;
                         case "S":
-                            y =- (operation.Value.Length > 1 ? Convert.ToInt32(operation.Value) : 0);
+                            y -= (operation.Value.Length > 1 ? Convert.ToInt32(operation.Value.Substring(1)) : 1);
                             break;
                         case "L":
-                            x =+ (operation.Value.Length > 1 ? Convert.ToInt32(operation.Value) : 0);
+                            x += (operation.Value.Length > 1 ? Convert.ToInt32(operation.Value.Substring(1)) : 1);
                             break;
                         case "O":
-                            x =- (operation.Value.Length > 1 ? Convert.ToInt32(operation.Value) : 0);
+                            x -= (operation.Value.Length > 1 ? Convert.ToInt32(operation.Value.Substring(1)) : 1);
                             break;
                     }
                 }
