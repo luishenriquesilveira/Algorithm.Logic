@@ -25,6 +25,11 @@
         {
             try
             {
+                //Input NULL
+                if (input == null)
+                {
+                    return "(999, 999)";
+                }
                 //Primeiro caractere do input deve ser uma direção [N, S, L, O]
                 if (!ValidateFirstCharacter(input))
                 {
