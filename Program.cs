@@ -30,6 +30,11 @@
                 {
                     return "(999, 999)";
                 }
+                //Input EMPTY/WHITESPACE
+                if (input.Trim() == "")
+                {
+                    return "(999, 999)";
+                }
                 //Primeiro caractere do input deve ser uma direção [N, S, L, O]
                 if (!ValidateFirstCharacter(input))
                 {
@@ -99,14 +104,14 @@
                         y -= operation.steps;
                         break;
                     case 'L':
-                        if (!ValidateOverflow(y, operation.steps))
+                        if (!ValidateOverflow(x, operation.steps))
                         {
                             return "(999, 999)";
                         }
                         x += operation.steps;
                         break;
                     case 'O':
-                        if (!ValidateOverflow(y, operation.steps  * (-1)))
+                        if (!ValidateOverflow(x, operation.steps  * (-1)))
                         {
                             return "(999, 999)";
                         }
@@ -182,7 +187,7 @@
 
         private static bool ValidateNumberZero(string input)
         {
-            Regex zero = new Regex("[A-Z]+0[A-Z]+");
+            Regex zero = new Regex("[NSLOX]+0([NSLOX]|$)");
 
             return !zero.IsMatch(input);
         }
