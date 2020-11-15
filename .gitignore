@@ -4,3 +4,5 @@ obj/
 Algorithm.Logic.Tests/bin/
 Algorithm.Logic.Tests/bin/
 bin/
+*.suo
+*.user
