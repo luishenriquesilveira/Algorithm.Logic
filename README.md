@@ -26,3 +26,24 @@ OBSERVAÇÕES:
 Realizar uma implementação com padrões de código para ambiente de "produção". 
 Comentar o código explicando o que for relevânte para a solução do problema.
 Adicionar testes unitários para alcançar uma cobertura de testes relevânte.
+
+
+# Considerações
+
+- Todas as considerações presentes deveriam ter sido discutidas responsável pela tarefa,seja gestor, líder ou cliente. 
+
+LIMITE PLANO CARTESIANO:
+Como não foi passada tal informação, foi trabalhado com os valores de limite Int32 [-2147483647 - +2147483647].
+Levando em conta que o código faria a tragetória de um drone no plano cartesiano, foram criadas validações para este número sempre ser respeitado. 
+Devido a isso, em qualquer operação do drone, mesmo antes do final do percurso, não ocerrerá situações de o drone estar temporariamente em uma zona inexistente no plano.
+
+CARACTERES MINÚSCULOS:
+Como não estava explícito na descrição e tendo em vista que era um desafio... 
+Foram considerados aceitos apenas caracteres maiúsculos, o que gera mais regras de negócio e testes.
+
+"PASSOS" COM ZERO À ESQUERDA:
+Como não estava explícito na descrição e tendo em vista que era um desafio... 
+Foram considerados aceitos, o que gera mais regras de negócio e testes.
+Exemplo1: "N00000000001" [Válido]
+Exemplo2: "N0" [Inválido]
+
