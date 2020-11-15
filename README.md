@@ -47,3 +47,7 @@ Foram considerados aceitos, o que gera mais regras de negócio e testes.
 Exemplo1: "N00000000001" [Válido]
 Exemplo2: "N0" [Inválido]
 
+TESTES UNITÁRIOS:
+Como foi solicitado, resultados inválidos retornam "(999, 999)".
+Em outra situação seria sugerido modificar isto, a posição do drone no intervalo (999, 999) é válida, porém, também é um retorno de falha.
+Poderiam ser modificados todos os testes, deixando mais clara a situação da falha.
